@@ -1,0 +1,109 @@
+<!DOCTYPE HTML>
+<html lang="en">
+  <head>
+    <title>C# Technical Documentation</title>
+    <link rel="stylesheet" href="styles.css"/>
+  </head>
+  <body>
+    <nav id="navbar">
+      <header>C# Documentation</header>
+      <ul>
+        <li><a class="nav-link" href="#Introduction">Introduction</a></li>
+        <li><a class="nav-link" href="#Features">Features</a></li>
+        <li><a class="nav-link" href="#Type_Safe">Type Safe</a></li>
+        <li><a class="nav-link" href="#Object-Oriented">Object-Oriented</a></li>
+        <li><a class="nav-link" href="#Functional_Programming_Techniques">Functional Programming Techniques</a></li>
+        <li><a class="nav-link" href="#.NET_Architecture">.NET Architecture</a></li>
+        <li><a class="nav-link" href="#Learning_Resources">Learning Resources</a></li>
+        <li><a class="nav-link" href="#Conclusion">Conclusion</a></li>
+      </ui>
+    </nav>
+    <main id="main-doc">
+      <h1>C# Programming Language</h1>
+      <section id="Introduction" class="main-section">
+        <header>Introduction</header>
+        <p>C# (pronounced “See Sharp”) is a modern, object-oriented, and type-safe programming language1. It enables developers to build many types of secure and robust applications that run in .NET. C# has its roots in the C family of languages and will be immediately familiar to C, C++, Java, and JavaScript programmers</p>
+        <p>Here’s a simple “Hello World” program in C#:</p>
+        <code>
+          <span class="class-text">Console</span>.<span class="method-text">WriteLine</span>(<span class="string-text">"Hello World!"</span>);
+        </code>
+        <p>This program prints hello world in console.</p>
+      </section>
+      <section id="Features" class="main-section">
+        <header>Features</header>
+        <p>C# has a number of features that make it a powerful and flexible language. It is a statically-typed, fully object-oriented language that supports the      concepts of encapsulation, inheritance, and polymorphism. Some key features include:</p>
+        <ul class="features">
+          <li>
+            <span class="feature-name">Type Safety:</span> All variables and constants have a type, as do all expressions that evaluate to a value.
+          </li>
+          <li>
+            <span class="feature-name">Garbage Collection:</span> Automatically manages memory, freeing up resources that are no longer in use
+          </li>
+          <li>
+            <span class="feature-name">Exception Handling:</span> Provides a structured, extensible approach to error detection and recovery
+          </li>
+          <li>
+            <span class="feature-name">Functional Programming Techniques:</span> Lambda expressions support functional programming techniques
+          </li>
+          <li>
+            <span class="feature-name">Asynchronous Programming:</span> Simplifies performing asynchronous operations using keywords like async and await
+          </li>
+        </ul>
+      </section>
+      <section id="Type_Safe" class="main-section">
+        <header>Type Safe</header>
+        <p>C# is a type-safe language. This means that the compiler ensures that all operations are done on compatible types. For example, you can’t add a string to an integer or assign a boolean value to an integer variable.</p>
+        <code><span class="type-text">int</span> <number = 10;<br>
+<span class="variable-text">number</span> = <span class="string-text">"Hello"</span>; <span class="comment-text"><br>// This will cause a compile error</span></code>
+      </section>
+      <section id="Object-Oriented" class="main-section">
+        <header>Object-Oriented</header>
+        <p>C# is an object-oriented language, which means it uses classes and objects to organize code. For example, you might have a Car class that has properties like Color and Speed, and methods like <code>Drive()</code> and <code>Stop()</code>.</p>
+        <code><span class="type-text">public class</span> <span class="class-text">Car</span><br>
+        {<br>
+        <span class="indent-one">
+          <span class="type-text">public string</span> <span class="variable-text">Color</span> { <span class="type-text">get</span>; <span class="type-text">set</span>; }
+          </span><br>
+        <span class="indent-one">
+          <span class="type-text">public int</span> <span class="variable-text">Speed</span> { <span class="type-text">get</span>; <span class="type-text">set</span>; }
+        </span><br>
+        <br>
+        <span class="indent-one">
+          <span class="type-text">public void</span> <span class="method-text">Drive</span>()
+        </span><br>
+        <span class="indent-one">{</span><br>
+        <span class="indent-two"><span class="class-text">Console</span>.<span class="method-text">WriteLine</span>(<span class="string-text">"Driving"</span>);</span><br>
+        <span class="indent-one">}</span><br>
+        <br>
+        <span class="indent-one"><span class="type-text">public void</span> <span class="method-text">Stop</span>()</span><br>
+        <span class="indent-one">{</span><br>
+        <span class="indent-two">
+          <span class="class-text">Console</span>.<span class="method-text">WriteLine</span>(<span class="string-text">"Stopped"</span>);
+        </span><br>
+        <span class="indent-one">}</span><br>
+        }
+        </code>
+      </section>
+      <section id="Functional_Programming_Techniques" class="main-section">
+        <header>Functional Programming Techniques</header>
+        <p>C# supports functional programming techniques through features like lambda expressions.</p>
+        <code>
+          <span class="class-text">List</span>&lt;<span class="type-text">int</span>&gt; <span class="variable-text">numbers</span> = <span class="type-text">new</span> <span class="class-text">List</span>&lt;<span class="type-text">int</span>&gt; { 1, 2, 3, 4, 5 };<br>
+          <span class="class-text">List</span>&lt;<span class="type-text">int</span>&gt; <span class="variable-text">evenNumbers</span> = <span class="variable-text">numbers</span>.<span class="method-text">Where</span>(n => n % 2 == 0).<span class="method-text">ToList</span>();
+        </code>
+      </section>
+      <section id=".NET_Architecture" class="main-section">
+        <header>.NET Architecture</header>
+        <p>C# programs run on .NET, a virtual execution system called the common language runtime (CLR) and a set of class libraries. The CLR is the implementation by Microsoft of the common language infrastructure (CLI), an international standard.</p>
+      </section>
+      <section id="Learning_Resources" class="main-section">
+        <header>Learning Resources</header>
+        <p>For those interested in learning more about C#, Microsoft provides a tour of the language through interactive examples in their C# <a href="https://learn.microsoft.com/en-us/dotnet/csharp/tour-of-csharp/tutorials/">tutorials</a>.</p>
+      </section>
+      <section id="Conclusion" class="main-section">
+        <header>Conclusion</header>
+        <p>C# is a powerful and versatile programming language with wide-ranging applications. Its object-oriented nature, robust features, and integration with the .NET framework make it an excellent choice for many software development projects.</p>
+      </section>
+    </main>
+  </body>
+</html>
